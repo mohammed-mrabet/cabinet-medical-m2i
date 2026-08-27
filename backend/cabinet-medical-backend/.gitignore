@@ -1,0 +1,27 @@
+# Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.eclipse/
+.settings/
+.classpath
+.project
+
+# Spring Boot
+*.log
+logs/
+
+# Fichiers sensibles — NE JAMAIS pousser sur GitHub
+src/main/resources/application.properties
+src/main/resources/application.yml
+src/main/resources/application-prod.properties
+
+# OS
+.DS_Store
+Thumbs.db

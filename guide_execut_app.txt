@@ -1,0 +1,17 @@
+Fichier de guide comment executer l'app cabinet medical
+---------------------------------------------------------------
+1. Ouvrir BD SQL
+C:\Votre chemin\oracle>sqlplus cabinet_medical/CabMed_2026!@//localhost:1521/oradb                                                                                                                                                                                                                   SQL*Plus: Release 11.2.0.1.0 Production on Mer. Juin 24 20:37:21 2026                                                                                                                                                                                                                                                                           Copyright (c) 1982, 2010, Oracle.  All rights reserved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ConnectÚ Ó :                                                                                                                                                            Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production                                                                                            With the Partitioning, OLAP, Data Mining and Real Application Testing options                                                                                                                                                                                                                                                                   SQL>
+-----------------
+2. Ouvrir mongosh
+C:\Votre chemin\mongodb>mongosh "mongodb://localhost:27017/cabinet_medical" --file 01_init_dossiers.js
+
+C:\Votre chemin\mongodb>mongosh
+------------------
+3. spring boot
+C:\Votre chemin\backend\cabinet-medical-backend>mvn clean install
+C:\Votre chemin\backend\cabinet-medical-backend>mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Duser.timezone=UTC"
+-----------------------
+4. Lancer l'app fontend
+C:\Votre chemin\frontend>npm install
+npm run dev

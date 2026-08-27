@@ -1,0 +1,8 @@
+# Oracle
+oracle/*.dump
+*.dmp
+
+# Général
+*.log
+.DS_Store
+Thumbs.db
